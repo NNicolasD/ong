@@ -30,3 +30,21 @@ class Noticia(models.Model):
     def delete(self, using = None , keep_parents = False):
         self.imagen.delete(self.imagen.name)
         super().delete()  
+
+#--- Tabla para los contactos:
+opciones_consultas=[
+    [0,'consulta'],
+    [1,'reclamo'],
+    [2,'sugerencia'],
+    [3,'felicitaciones'],
+]
+class Contacto(models.Model):
+    nombre= models.CharField(max_length=50)
+    correo = models.EmailField(max_length=80)
+    tipo_de_consulta = models.IntegerField(choices= opciones_consultas, default='0')
+    mensaje = models.TextField()
+    desea_recibir_avisos = models.BooleanField()
+
+    def _str_(self):
+        return self.nombre
+#---

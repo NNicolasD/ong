@@ -395,7 +395,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 41vh;
   background: #37517e;
 }
 
@@ -533,7 +533,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
@@ -912,6 +912,16 @@ section {
   background-size: cover;
   padding: 120px 0;
 }
+.cta2 {
+  background: linear-gradient(rgba(10, 10, 10, 0.508), rgba(30, 30, 31, 0.481)), url("../img/qom.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
+.cta3 {
+  background: linear-gradient(rgba(10, 10, 10, 0.508), rgba(30, 30, 31, 0.481)), url("../img/qom.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
 
 .cta h3 {
   color: #fff;
@@ -1148,7 +1158,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: #37517e;
+  color: #106412;
 }
 
 .team .member span {
