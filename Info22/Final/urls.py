@@ -28,12 +28,15 @@ from App.noticias.models import  Contacto
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Index),
-    path('inicio',Index),
+    path('inicio',Index,name='inicio'),
     path('',include('App.noticias.urls')),
     path('nosotros',nosotros),
     path('password',password),
     path('donaciones',donaciones),
     path('contacto/', views.Contacto , name = 'Contacto'),
+    path('register/',views.registerPage, name= "register"),
+    path('login/',views.loginPage, name= "login"),
+    path('logout/',views.logoutUser, name= "logout"),
 ] 
 static(STATIC_URL, document_root = STATIC_ROOT)
 

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os 
 import cryptography
+from django.contrib.messages import constants as mensajes_de_error
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -132,3 +133,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+MESAGGE_TAG = {
+    mensajes_de_error.DEBUG : 'debug',
+    mensajes_de_error.INFO : 'info',
+    mensajes_de_error.SUCCESS : 'success',
+    mensajes_de_error.WARNING : 'warning',
+    mensajes_de_error.ERROR : 'danger',
+}

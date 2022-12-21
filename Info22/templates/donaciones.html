@@ -34,7 +34,11 @@
           <li><a class="nav-link scrollto" href="#"></a></li>
           <li><a class="nav-link scrollto" href="#team"></a></li>
           <li><a class="nav-link scrollto" href="#contact"></a></li>
-          <li><a class="getstarted scrollto" href="login"style="color: #111000;">Registrate!</a></li>
+          {% if user.is_authenticated  %}
+          <li><a class="getstarted scrollto" href='logout'>Cerrar Sesion:  {{request.user}}</a></li>
+          {% else %}
+          <li><a class="getstarted scrollto" href='login'>Iniciar Sesion</a></li>
+          {% endif %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
