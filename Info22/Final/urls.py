@@ -31,7 +31,7 @@ urlpatterns = [
     path('inicio',Index,name='inicio'),
     path('',include('App.noticias.urls')),
     path('nosotros',nosotros),
-    path('password',password),
+    # path('password',password),
     path('donaciones',donaciones),
     path('contacto/', views.Contacto , name = 'Contacto'),
     path('register/',views.registerPage, name= "register"),
@@ -40,5 +40,5 @@ urlpatterns = [
 ] 
 static(STATIC_URL, document_root = STATIC_ROOT)
 
-# urlpatterns = staticfiles_urlpatterns()
-# urlpatterns = static(MEDIA_URL,document_root = MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.noticias',
-    'miembros',
+    'App.usuario',
+    'App.comentario',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ MESAGGE_TAG = {
     mensajes_de_error.WARNING : 'warning',
     mensajes_de_error.ERROR : 'danger',
 }
+
+AUTH_USER_MODEL = 'usuario.Usuario'
