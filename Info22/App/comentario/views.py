@@ -17,11 +17,11 @@ from django.urls import reverse_lazy
 
 def Comentar(request):
     comentarios = Comentarios.objects.all()
-    usuario = request.user.id
+    # usuario = request.user.id
 
     context={
         'comentarios' : comentarios,
-        'usuario': usuario,
+        'usuario': Usuario,
     }
     return render(request,'comentario/listadoComentario.html', context)
 

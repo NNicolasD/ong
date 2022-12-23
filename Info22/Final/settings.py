@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os 
 import cryptography
+# from django.contrib.auth import get_user_model
 from django.contrib.messages import constants as mensajes_de_error
 from pathlib import Path
 
@@ -146,3 +147,4 @@ MESAGGE_TAG = {
 }
 
 AUTH_USER_MODEL = 'usuario.Usuario'
+# User = get_user_model()

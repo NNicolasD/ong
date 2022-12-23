@@ -19,7 +19,7 @@
 
        
         {% if n.imagen %}<img src="{{n.imagen.url}}" class = "img-fluid animated" alt =''
-        {% else %}<img src="static/assets/iconoONG2.png"{% endif %}
+        {% else %}<img src="static/assets/Chico200px.png">{% endif %}
         <div class="col-lg-6">
           <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
             <div class="pic">    
@@ -30,6 +30,11 @@
               <span>{{n.publicado}}</span>
               <p>{{n.texto}}</p>
               <div class="social">
+                {% if user.is_authenticated %}
+                <a class="btn-solid-reg page-scroll" href="#">Comentar...</a>
+                {% else %}
+                <a class="btn-solid-reg page-scroll" href="{% url 'login' %}">Iniciar sesion.!</a>
+                {% endif %}
               </div>
             </div>
           </div>
